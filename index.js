@@ -80,8 +80,11 @@ function getName(obj) {
 */
 function makeSmartPerson(name) {
   const obj = {
-
-  } ;
+    'name': name,
+    'sum': (num1, num2) => (num1 + num2),
+    'speak': () => `Hello, my name is ${name}`
+  };
+  return obj;
 }
 
 /**
