@@ -61,7 +61,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(obj) {
-  let name_string = `Hello, my name is ${obj.name}`
+  const name_string = `Hello, my name is ${obj.name}`;
   return name_string;
 }
 
@@ -78,8 +78,10 @@ function getName(obj) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  const obj = {
+
+  } ;
 }
 
 /**
