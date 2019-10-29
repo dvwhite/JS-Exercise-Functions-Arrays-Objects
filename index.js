@@ -176,7 +176,7 @@ function sortCarInventory(cars_inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(cars_inventory) {
-  const car_years = []
+  const car_years = [];
   for (let idx = 0; idx < cars_inventory.length; idx++) {
     let car = cars_inventory[idx];
     car_years.push(car.car_year);
@@ -197,12 +197,12 @@ function getModelYears(cars_inventory) {
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(cars_inventory, max_year) {
-  const older_cars = []
+  const older_cars = [];
   for (let idx = 0; idx < cars_inventory.length; idx++) {
     let car = cars_inventory[idx];
     if (car.car_year <= max_year) {
       older_cars.push(car);
-    }
+    };
   }
   return older_cars;
 }
@@ -218,8 +218,16 @@ function getOlderCars(cars_inventory, max_year) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(cars_inventory) {
+  const german_car_makes = [ `Audi`, `Mercedes-Benz`, `Volkswagen`, `BMW`];
+  const german_cars = [];
+  for (let idx = 0; idx < cars_inventory.length; idx++) {
+    let car = cars_inventory[idx];
+    if (german_car_makes.includes(car.car_make)) {
+      german_cars.push(car);
+    };
+  }
+  return german_cars;
 }
 
 /**
